@@ -5,7 +5,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'Summon',
+            name: 'Sumon',
             age : 24,
             city: 'Dhaka'
         }
@@ -13,7 +13,7 @@ class App extends Component {
 
     changeData = () => {
         this.setState({
-            name: 'Samy',
+            name: 'Sayma',
             age : 20,
             city: 'Mohammadpur'
         })
