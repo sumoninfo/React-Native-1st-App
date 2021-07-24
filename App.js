@@ -2,6 +2,23 @@ import React, { Component }                   from "react";
 import { Alert, FlatList, Image, Text, View } from "react-native";
 
 class FlatListComponent extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+    };
+  }
+
+  componentDidMount() {
+    this.apiCall();
+  }
+
+  apiCall  = async () => {
+    let resp     = await fetch("https://reactnative.dev/movies.json");
+    let respJson = await resp.json();
+    this.setState({ data: respJson.movies });
+  };
   JsonData = [
     {
       id      : 1,
@@ -107,12 +124,13 @@ class FlatListComponent extends Component {
     );
   };
 
-
   render() {
     return (
-      <FlatList keyExtractor={item => item.id} numColumns={2} horizontal={false} data={this.JsonData}
+      /*<FlatList keyExtractor={item => item.id} numColumns={2} horizontal={false} data={this.JsonData}
                 renderItem={({ item }) => <this.ChildView ChildTitle={item.title} ChildSubTitle={item.subTitle}
-                                                          img={item.img} />} />
+                                                          img={item.img} />} />*/
+      <FlatList data={this.state.data} renderItem={({ item }) =>
+        <Text style={{fontSize:40, backgroundColor:'skyblue', margin:15}}>{item.title}</Text>} />
     );
   }
 }
