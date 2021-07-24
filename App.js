@@ -130,7 +130,7 @@ class FlatListComponent extends Component {
                 renderItem={({ item }) => <this.ChildView ChildTitle={item.title} ChildSubTitle={item.subTitle}
                                                           img={item.img} />} />*/
       <FlatList data={this.state.data} renderItem={({ item }) =>
-        <Text style={{fontSize:40, backgroundColor:'skyblue', margin:15}}>{item.title}</Text>} />
+        <Text style={{fontSize:40, backgroundColor:'skyblue', margin:15}}>{item.title} aa</Text>} />
     );
   }
 }
