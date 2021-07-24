@@ -2,7 +2,7 @@ import React, {Component}   from 'react';
 import {View}               from "react-native";
 import ClassComponentProps2 from "./components/ClassComponentProps2";
 
-class App extends Component {
+class ClassComponentProps extends Component {
     render() {
         return (
             <View>
@@ -12,4 +12,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default ClassComponentProps;

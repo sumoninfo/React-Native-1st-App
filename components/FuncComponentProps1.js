@@ -1,7 +1,7 @@
 import React        from 'react';
 import {Text, View} from "react-native";
 
-const Component1 = ({name, age, address}) => {
+const FuncComponentProps1 = ({name, age, address}) => {
     return (
         <View>
             <Text>Name: {name}</Text>
@@ -11,4 +11,4 @@ const Component1 = ({name, age, address}) => {
     );
 };
 
-export default Component1;
+export default FuncComponentProps1;
