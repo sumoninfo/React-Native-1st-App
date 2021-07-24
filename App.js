@@ -1,34 +1,24 @@
-import React, {Component}   from 'react';
+import React, {useState}    from 'react';
 import {Button, Text, View} from "react-native";
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: 'Sumon',
-            age : 24,
-            city: 'Dhaka'
-        }
-    }
-
-    changeData = () => {
-        this.setState({
+const MyComponent = () => {
+    const [state, setState] = useState({
+        name: 'Sumon',
+        city: 'Dhaka',
+    });
+    const updateData        = () => {
+        setState({
             name: 'Sayma',
-            age : 20,
-            city: 'Mohammadpur'
+            city: "Narayangong"
         })
     }
+    return (
+        <View>
+            <Text>Name: {state.name}</Text>
+            <Text>City: {state.city}</Text>
+            <Button title="Update State Data" onPress={updateData}/>
+        </View>
+    );
+};
 
-    render() {
-        return (
-            <View>
-                <Text>Name: {this.state.name}</Text>
-                <Text>Age: {this.state.age}</Text>
-                <Text>City: {this.state.city}</Text>
-                <Button title="Click me" onPress={this.changeData}/>
-            </View>
-        );
-    }
-}
-
-export default App;
+export default MyComponent;
