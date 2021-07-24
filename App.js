@@ -5,28 +5,31 @@ class App extends Component {
     render() {
         return (
             <View style={{
-                flexDirection  : 'row',
-                justifyContent : "center",
-                height         : "100%",
-                width          : "100%",
-                backgroundColor: 'red'
+                flexDirection: 'row',
+                height       : "100%",
+                width        : "100%",
             }}>
                 <View style={{
-                    flexDirection  : 'row',
-                    justifyContent : "center",
-                    height         : "80%",
-                    width          : "80%",
-                    backgroundColor: 'green'
+                    backgroundColor: "orange",
+                    flexDirection  : 'column',
+                    height         : "100%",
+                    width          : "32%"
                 }}>
-                    <View style={{
-                        flexDirection  : 'column',
-                        justifyContent : "center",
-                        height         : "50%",
-                        width          : "50%",
-                        backgroundColor: 'blue'
-                    }}></View>
                 </View>
-
+                <View style={{
+                    backgroundColor: "red",
+                    flexDirection  : 'column',
+                    height         : "100%",
+                    width          : "32%"
+                }}>
+                </View>
+                <View style={{
+                    backgroundColor: "gray",
+                    flexDirection  : 'column',
+                    height         : "100%",
+                    width          : "32%"
+                }}>
+                </View>
             </View>
         );
     }
