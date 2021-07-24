@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React        from 'react';
 import {Text, View} from "react-native";
 
-class Component1 extends Component {
-    render() {
-        return (
-            <View>
-                <Text>I'm Component 1</Text>
-            </View>
-        );
-    }
-}
+const Component1 = ({name, age, address}) => {
+    return (
+        <View>
+            <Text>Name: {name}</Text>
+            <Text>Age: {age}</Text>
+            <Text>Address: {address.city},  {address.state}</Text>
+        </View>
+    );
+};
 
 export default Component1;

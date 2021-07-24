@@ -1,22 +1,17 @@
-import React, {useState}    from 'react';
-import {Button, Text, View} from "react-native";
+import React, {useState} from 'react';
+import {View}            from "react-native";
+import Component1        from "./components/Component1";
 
 const MyComponent = () => {
-    const [state, setState] = useState({
-        name: 'Sumon',
-        city: 'Dhaka',
+    const [name, setName]       = useState("Sumon");
+    const [age, setAge]         = useState(24);
+    const [address, setAddress] = useState({
+        city : 'Mohammadpur',
+        state: "Dhaka"
     });
-    const updateData        = () => {
-        setState({
-            name: 'Sayma',
-            city: "Narayangong"
-        })
-    }
     return (
         <View>
-            <Text>Name: {state.name}</Text>
-            <Text>City: {state.city}</Text>
-            <Button title="Update State Data" onPress={updateData}/>
+            <Component1 name={name} age={age} address={address}/>
         </View>
     );
 };
