@@ -6,12 +6,12 @@ class FlatListComponent extends Component {
     {
       title   : "Bangladesh",
       img     : "https://cdn.pixabay.com/photo/2021/07/19/06/29/kangaroo-6477341_960_720.jpg",
-      subTitle: "This is my country name, here something",
+      subTitle: "11 This is my country name, here something. This is my country name, here something",
     },
     {
       title   : "USA",
       img     : "https://image.shutterstock.com/image-vector/original-simple-bangladesh-flag-isolated-600w-159935018.jpg",
-      subTitle: "This is my country name, here something. ",
+      subTitle: "This is my country name, here something. This is my country name, here something. ",
     },
     {
       title   : "India",
@@ -81,13 +81,13 @@ class FlatListComponent extends Component {
 
   ChildView = ({ ChildTitle, ChildSubTitle, img }) => {
     return (
-      <View style={{ flexDirection: "column", width:185, height:200, backgroundColor: "white", margin: 5}}>
+      <View style={{ flexDirection: "column", width:200, height:200, backgroundColor: "red", margin: 5}}>
         <View>
           <Image style={{ height: 100, width: "100%" }} source={{ uri: img }} />
         </View>
         <View style={{padding: 10 }}>
           <Text onPress={() => this.onPress(ChildTitle)}
-                style={{ color: "black", fontSize: 18 }}>{ChildTitle}</Text>
+                style={{ color: "black", fontSize: 18 }}>{ChildTitle} 111</Text>
           <Text style={{ color: "blue", fontSize: 12 }}>{ChildSubTitle}</Text>
         </View>
       </View>
@@ -97,7 +97,7 @@ class FlatListComponent extends Component {
 
   render() {
     return (
-      <FlatList numColumns={2} horizontal={false} data={this.JsonData}
+      <FlatList horizontal={true} data={this.JsonData}
                 renderItem={({ item }) => <this.ChildView ChildTitle={item.title} ChildSubTitle={item.subTitle}
                                                           img={item.img} />} />
     );
