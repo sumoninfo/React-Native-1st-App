@@ -12,12 +12,21 @@ class App extends Component {
                 backgroundColor: 'red'
             }}>
                 <View style={{
-                    flexDirection  : 'column',
+                    flexDirection  : 'row',
                     justifyContent : "center",
                     height         : "80%",
                     width          : "80%",
                     backgroundColor: 'green'
-                }}></View>
+                }}>
+                    <View style={{
+                        flexDirection  : 'column',
+                        justifyContent : "center",
+                        height         : "50%",
+                        width          : "50%",
+                        backgroundColor: 'blue'
+                    }}></View>
+                </View>
+
             </View>
         );
     }
