@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View }             from "react-native";
 
-class HeigthWidthFlexFixedDaymantion extends Component {
+class HeightWidthFlexFixedDaymantion extends Component {
   render() {
     return (
       <View style={{ backgroundColor: "black", flex: 10 }}>
