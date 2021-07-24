@@ -1,12 +1,11 @@
-import React, {Component}   from 'react';
-import {View}               from "react-native";
-import ClassComponentProps2 from "./components/ClassComponentProps2";
+import React, {Component} from 'react';
+import {Text, View}       from "react-native";
 
 class App extends Component {
     render() {
         return (
             <View>
-                <ClassComponentProps2 name="Sayma" age="24" city="Dhaka"/>
+                <Text>Hello</Text>
             </View>
         );
     }
