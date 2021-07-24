@@ -1,7 +1,7 @@
 import React, { Component }     from "react";
 import { FlatList, Text, View } from "react-native";
 
-class FlatListComponent extends Component {
+class App extends Component {
   JsonData = [
     { title: "Bangladesh", subTitle: "This is my country name, here something" },
     { title: "USA", subTitle: "This is my country name, here something" },
@@ -69,4 +69,4 @@ class FlatListComponent extends Component {
   }
 }
 
-export default FlatListComponent;
+export default App;
