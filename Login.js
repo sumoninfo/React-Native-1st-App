@@ -1,31 +1,14 @@
-import React, {useState}                                                  from "react";
-import {Alert, StatusBar, StyleSheet, Text}                               from "react-native";
-import {CardItem, Container, Content, Header, Input, Title, Button, Body} from "native-base";
-
-import axios from "axios";
+import React, {useState}                                                        from "react";
+import {Alert, StatusBar, StyleSheet, Text}                                     from "react-native";
+import {Card, CardItem, Container, Content, Header, Input, Title, Button, Body} from "native-base";
 
 const App    = () => {
     const [email, setEmail]       = useState("");
     const [password, setPassword] = useState("");
 
     const loginFunc = async () => {
-        axios.post('http://localhost:8000/api/v1/login', {
-            email,
-            password
-        }).then(function (response) {
-            console.log(response.data)
-            alert(response);
-        }).catch(function (error) {
-            // handle error
-            alert(error.message);
-        }).finally(function () {
-            // always executed
-            alert('Finally called');
-        });
+        Alert.alert("okkk")
     }
-    const onPress   = (alertTitle) => {
-        Alert.alert(alertTitle);
-    };
     return (
         <>
             <StatusBar barStyle="dark-content"/>
@@ -40,8 +23,7 @@ const App    = () => {
                         <Text style={styles.heading}>Login with Laravel API</Text>
                     </CardItem>
                     <CardItem>
-                        <Input value={email} onChangeText={(value) => setEmail(value)}
-                               placeholder="Enter Email" style={styles.input}/>
+                        <Input placeholder="Enter Email" style={styles.input}/>
                     </CardItem>
                     <CardItem>
                         <Input value={password} onChangeText={(value) => setPassword(value)}
@@ -49,14 +31,10 @@ const App    = () => {
                     </CardItem>
                     <CardItem>
                         <Body>
-                            <Button primary block onPress={() => loginFunc()}>
+                            <Button primary block onPress={() => loginFunc}>
                                 <Text style={styles.btn}>Login</Text>
                             </Button>
                         </Body>
-                    </CardItem>
-                    <CardItem>
-                        <Text onPress={() => onPress("ChildTitle")}
-                              style={{color: "black", fontSize: 18}}>Click Me</Text>
                     </CardItem>
                 </Content>
             </Container>
