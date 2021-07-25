@@ -3,7 +3,7 @@ import {Image, Text, View}          from "react-native";
 import ApiService                   from "../../services/api.service";
 import NotificationService          from "../../services/notification.service";
 
-import {Body, Button, Card, CardItem, Content, Icon, Left, Thumbnail} from "native-base";
+import {Body, Button, Card, CardItem, Content, Left} from "native-base";
 
 const SinglePost = ({match}) => {
     const {post_id}                        = match.params;

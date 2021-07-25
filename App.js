@@ -5,6 +5,7 @@ import {Container, Content} from "native-base";
 
 import NabBar     from "./src/views/layouts/NabBar";
 import RouterPage from "./src/router/Index";
+import Footer     from "./src/views/layouts/Footer";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 {/*<Content>*/}
                 <RouterPage/>
                 {/*</Content>*/}
+                <Footer/>
             </Container>
 
         </NativeRouter>
