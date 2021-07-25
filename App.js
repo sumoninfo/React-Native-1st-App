@@ -16,7 +16,7 @@ const App = () => {
                 {/*<Content>*/}
                 <RouterPage/>
                 {/*</Content>*/}
-                <Footer/>
+                {/*<Footer/>*/}
             </Container>
 
         </NativeRouter>
