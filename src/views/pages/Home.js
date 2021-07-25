@@ -4,7 +4,7 @@ import {Text, View} from "react-native";
 const Home = () => {
     return (
         <View>
-            <Text>Home Page</Text>
+            <Text>Home Page 1</Text>
         </View>
     );
 };

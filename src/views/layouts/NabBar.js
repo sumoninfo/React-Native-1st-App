@@ -1,28 +1,21 @@
 import React                    from "react";
 import {StyleSheet, Text, View} from "react-native";
 import {Link}                   from "react-router-native";
+import {Header}                 from "native-base";
 
 const NabBar = () => {
     return (
-        <View style={styles.nav}>
+        <Header style={styles.nav}>
             <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
                 <Text>Home</Text>
             </Link>
-            <Link
-                to="/about"
-                underlayColor="#f0f4f7"
-                style={styles.navItem}
-            >
+            <Link to="/about" underlayColor="#f0f4f7" style={styles.navItem}>
                 <Text>About</Text>
             </Link>
-            <Link
-                to="/posts"
-                underlayColor="#f0f4f7"
-                style={styles.navItem}
-            >
+            <Link to="/posts" underlayColor="#f0f4f7" style={styles.navItem}>
                 <Text>Posts</Text>
             </Link>
-        </View>
+        </Header>
     )
 }
 const styles = StyleSheet.create({
