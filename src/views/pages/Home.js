@@ -1,12 +1,15 @@
-import React        from 'react';
-import {Text, View} from "react-native";
+import React       from "react";
+import { Content } from "native-base";
+import { Text }    from "react-native";
+import IconAnt     from "react-native-vector-icons/AntDesign";
 
 const Home = () => {
-    return (
-        <View>
-            <Text>Home Page 1</Text>
-        </View>
-    );
+  return (
+    <Content>
+      <Text>Hello Home <IconAnt name="home" /></Text>
+
+    </Content>
+  );
 };
 
 export default Home;

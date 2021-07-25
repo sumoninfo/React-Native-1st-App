@@ -3,7 +3,8 @@ import { Alert, FlatList, Image, Text, View } from "react-native";
 import ApiService                             from "../../services/api.service";
 import axios                                  from "axios";
 import { Link }                               from "react-router-native";
-import NotificationService                    from "../../services/notification.service";
+import NotificationService                                   from "../../services/notification.service";
+import { Body, Button, CardItem, Header, Icon, Input, Item } from "native-base";
 
 const Posts = () => {
   const [search, setSearch]         = useState("");
@@ -16,6 +17,7 @@ const Posts = () => {
   }, []);
   //------------getPosts------------------
   const getPosts = async (current_page = null) => {
+    console.log(search, 'search');
     const params = {
       page   : current_page ?? pagination.current_page,
       keyword: search,
@@ -49,10 +51,23 @@ const Posts = () => {
     );
   };
   return (
-    <FlatList numColumns={2} horizontal={false} data={posts}
-              renderItem={({ item }) => <ChildView post={item} />}
-              keyExtractor={(item, index) => index}
-    />
+    <View>
+      <Header searchBar rounded>
+        <Item>
+          <Icon onPress={() => getPosts()} name="ios-search" />
+          <Input value={search} onChangeText={(value)=>setSearch(value)} placeholder="Search" />
+          <Icon name="ios-search" />
+        </Item>
+        <Button transparent>
+          <Text>Search</Text>
+        </Button>
+      </Header>
+      <FlatList numColumns={2} horizontal={false} data={posts}
+                renderItem={({ item }) => <ChildView post={item} />}
+                keyExtractor={(item, index) => index}
+      />
+    </View>
+
   );
 };
 
