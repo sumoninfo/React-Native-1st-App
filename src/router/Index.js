@@ -1,5 +1,5 @@
-import React    from "react";
-import {Switch} from "react-router-native";
+import React           from "react";
+import {Switch, Route} from "react-router-native";
 
 //Pages
 import Home          from "../views/pages/Home";
@@ -8,7 +8,6 @@ import Posts         from "../views/pages/Posts";
 import Post          from "../views/pages/Post";
 import NotFound      from "../views/pages/NotFound";
 import CategoryPosts from "../views/pages/CategoryPosts";
-import {Route}       from "react-router-native";
 //Admin
 // import Dashboard       from "../views/admin/Dashboard";
 // import PostIndex       from "../views/admin/post/Index";
