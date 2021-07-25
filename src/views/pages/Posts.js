@@ -2,6 +2,7 @@ import React, {useState, useEffect}         from 'react';
 import {Alert, FlatList, Image, Text, View} from "react-native";
 import ApiService                           from "../../services/api.service";
 import axios                                from "axios";
+import {Link}                               from "react-router-native";
 
 const Posts = () => {
     const [search, setSearch]         = useState("");
@@ -40,8 +41,9 @@ const Posts = () => {
                     <Image style={{height: 100, width: "100%"}} source={{uri: post.image}}/>
                 </View>
                 <View style={{padding: 10}}>
-                    <Text onPress={() => onPress(post.title)}
-                          style={{color: "black", fontSize: 18}}>{post.title}</Text>
+                    <Link to={`/posts/${post.id}`}>
+                        <Text style={{color: "black", fontSize: 18}}>{post.title}</Text>
+                    </Link>
                     {/*<Text style={{color: "blue", fontSize: 12}}>{post.description}</Text>*/}
                 </View>
             </View>
