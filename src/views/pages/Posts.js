@@ -30,27 +30,26 @@ const Posts = () => {
     }
 
     const onPress = (alertTitle) => {
-
+        Alert.alert(alertTitle)
     };
 
-    const ChildView = ({ChildTitle, ChildSubTitle, img}) => {
+    const ChildView = ({post}) => {
         return (
             <View style={{flexDirection: "column", width: 185, height: 200, backgroundColor: "white", margin: 5}}>
                 <View>
-                    <Image style={{height: 100, width: "100%"}} source={{uri: img}}/>
+                    <Image style={{height: 100, width: "100%"}} source={{uri: post.image}}/>
                 </View>
                 <View style={{padding: 10}}>
-                    <Text onPress={() => onPress(ChildTitle)}
-                          style={{color: "black", fontSize: 18}}>{ChildTitle}</Text>
-                    <Text style={{color: "blue", fontSize: 12}}>{ChildSubTitle}</Text>
+                    <Text onPress={() => onPress(post.title)}
+                          style={{color: "black", fontSize: 18}}>{post.title}</Text>
+                    {/*<Text style={{color: "blue", fontSize: 12}}>{post.description}</Text>*/}
                 </View>
             </View>
         );
     };
     return (
         <FlatList numColumns={2} horizontal={false} data={posts}
-                  renderItem={({item}) => <ChildView ChildTitle={item.title} ChildSubTitle={item.description}
-                                                     img={item.image} />}
+                  renderItem={({item}) => <ChildView post={item}/>}
                   keyExtractor={(item, index) => index}
         />
     );

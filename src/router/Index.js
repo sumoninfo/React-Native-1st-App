@@ -26,7 +26,6 @@ const RouterPage = () => {
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
-            <Route path="/posts" component={Posts}/>
             <Route path="/posts/:type/:type_id" component={CategoryPosts}/>
             <Route path="/posts/:post_id" component={Post}/>
             <Route path="/posts" component={Posts}/>
