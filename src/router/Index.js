@@ -9,6 +9,8 @@ import Post          from "../views/pages/Post";
 import NotFound      from "../views/pages/NotFound";
 import CategoryPosts from "../views/pages/CategoryPosts";
 import { View }      from "react-native";
+import Login         from "../views/auth/Login";
+import ContactList   from "../views/pages/ContactList";
 //Admin
 // import Dashboard       from "../views/admin/Dashboard";
 // import PostIndex       from "../views/admin/post/Index";
@@ -27,7 +29,11 @@ const routes = [
   },
   {
     path     : "/",
-    component: Home,
+    component: Login,
+  },
+  {
+    path     : "/contact-list",
+    component: ContactList,
   },
   {
     path     : "/posts",

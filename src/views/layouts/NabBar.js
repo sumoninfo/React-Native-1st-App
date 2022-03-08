@@ -9,8 +9,8 @@ const NabBar = () => {
             <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
                 <Text>Home</Text>
             </Link>
-            <Link to="/about" underlayColor="#f0f4f7" style={styles.navItem}>
-                <Text>About</Text>
+            <Link to="/contact-list" underlayColor="#f0f4f7" style={styles.navItem}>
+                <Text>Contact List</Text>
             </Link>
             <Link to="/posts" underlayColor="#f0f4f7" style={styles.navItem}>
                 <Text>Posts</Text>
