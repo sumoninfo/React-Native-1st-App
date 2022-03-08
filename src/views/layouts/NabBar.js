@@ -1,46 +1,46 @@
-import React                    from "react";
-import {StyleSheet, Text, View} from "react-native";
-import {Link}                   from "react-router-native";
-import {Header}                 from "native-base";
+import React                      from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { Link }                   from "react-router-native";
+import { Header }                 from "native-base";
 
 const NabBar = () => {
-    return (
-        <Header style={styles.nav}>
-            <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
-                <Text>Home</Text>
-            </Link>
-            <Link to="/contact-list" underlayColor="#f0f4f7" style={styles.navItem}>
-                <Text>Contact List</Text>
-            </Link>
-            <Link to="/posts" underlayColor="#f0f4f7" style={styles.navItem}>
-                <Text>Posts</Text>
-            </Link>
-        </Header>
-    )
-}
+  return (
+    <Header style={styles.nav}>
+      <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
+        <Text>Home</Text>
+      </Link>
+      <Link to="/contact-list" underlayColor="#f0f4f7" style={styles.navItem}>
+        <Text>Contacts List</Text>
+      </Link>
+      <Link to="/calling" underlayColor="#f0f4f7" style={styles.navItem}>
+        <Text>Calling</Text>
+      </Link>
+    </Header>
+  );
+};
 const styles = StyleSheet.create({
-    container : {
-        marginTop: 25,
-        padding  : 10
-    },
-    header    : {
-        fontSize: 20
-    },
-    nav       : {
-        flexDirection : "row",
-        justifyContent: "space-around"
-    },
-    navItem   : {
-        flex      : 1,
-        alignItems: "center",
-        padding   : 10
-    },
-    subNavItem: {
-        padding: 5
-    },
-    topic     : {
-        textAlign: "center",
-        fontSize : 15
-    }
+  container : {
+    marginTop: 25,
+    padding  : 10,
+  },
+  header    : {
+    fontSize: 20,
+  },
+  nav       : {
+    flexDirection : "row",
+    justifyContent: "space-around",
+  },
+  navItem   : {
+    flex      : 1,
+    alignItems: "center",
+    padding   : 10,
+  },
+  subNavItem: {
+    padding: 5,
+  },
+  topic     : {
+    textAlign: "center",
+    fontSize : 15,
+  },
 });
 export default NabBar;
